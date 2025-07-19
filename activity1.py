@@ -1,16 +1,9 @@
-numbers1=[1,2,3]
-numbers2=[4,5,6]
+class s():
+    def __init__(self,name):
+        self.name=name
+    def display(self):
+        print("Reverse String is ",self.name[::-1])
+name=input("Enter any string")
 
-result=map(lambda x, y: x + y,numbers1, numbers2)
-
-print("Addition of two lists")
-print(list(result))
-
-nums = [1,2,3,4,5]
-
-def sq(n):
-    return n * n
-
-square = list(map(sq, nums))
-
-print("Sqare of numbers in the list")
+st=s(name)
+st.display()
