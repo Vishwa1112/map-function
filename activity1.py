@@ -1,21 +1,13 @@
-class Person( object ):
+import pygame
 
-    def __init__(self,name, idnumber):
-        self.name = name
-        self.idnumber = idnumber
+pygame.init()
+screen = pygame.display.set_mode((400,300))
+done = False
 
-    def display(self):
-                print(self.name)
-                print(self.idnumber)
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+    pygame.draw.rect(screen,(0, 125, 255), pygame.Rect(100, 60, 60, 60))
 
-class Employee( Person ):
-                def __init__(self, name, idnumber,salary,post):
-                            self.salary = salary
-                            self.post = post
-                            Person.__init__(self, name, idnumber)
-
-a = Employee('Rahul',8886012, 200000, "Intern")
-
-a.display()
-
-                            
+    pygame.display.flip()
